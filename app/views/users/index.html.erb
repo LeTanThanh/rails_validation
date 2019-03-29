@@ -1,0 +1,18 @@
+<div class="container">
+  <h2>User list</h2>
+  <p>Users're listed in table below</p>
+
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Id</th>
+        <th>Name</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @users.each do |user| %>
+        <%= render "users/user", user: user %>
+      <% end %>
+    </tbody>
+  </table>
+</div>
