@@ -3,6 +3,7 @@
   <td><%= user.name %></td>
   <td>
     <%= link_to "View user", user, class: "btn btn-primary" %>
+    <%= link_to "Edit user", edit_user_path(user), class: "btn btn-warning" %>
     <%= link_to "Delete user", user_path(user), method: :DELETE, class: "btn btn-danger" %>
   </td>
 </tr>

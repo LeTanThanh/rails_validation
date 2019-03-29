@@ -1,0 +1,6 @@
+<div class="container">
+  <h2>Edit user <%= @name || @user.name %></h2>
+  <p>You can back to User list <%= link_to "here", root_path %></p>
+
+  <%= render "users/form", user: @user %>
+</div>

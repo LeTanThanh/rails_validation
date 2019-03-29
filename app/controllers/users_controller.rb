@@ -1,11 +1,24 @@
 class UsersController < ApplicationController
-  before_action :load_user, only: %i|show destroy|
+  before_action :load_user, only: %i|show edit update destroy|
 
   def index
     @users = User.all
   end
 
-  def show
+  def show; end
+
+  def edit; end
+
+  def update
+    @name = @user.name
+
+    if @user.update_attributes user_params
+      flash[:success] = "User is updated"
+      redirect_to @user
+    else
+      flash.now[:danger] = "User isn't updated"
+      render :edit
+    end
   end
 
   def destroy
@@ -19,6 +32,10 @@ class UsersController < ApplicationController
   end
 
   private
+
+  def user_params
+    params.require(:user).permit :name
+  end
 
   def load_user
     @user = User.find_by id: params[:id]
