@@ -1,0 +1,20 @@
+<div class="container">
+  <h2>User <%= @user.name %></h2>
+  <p>User's info is listed in table below</p>
+  <p>You can back to User list <%= link_to "here", root_path %></p>
+
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Id</th>
+        <td><%= @user.id %></td>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th>Name</th>
+        <td><%= @user.name %></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
