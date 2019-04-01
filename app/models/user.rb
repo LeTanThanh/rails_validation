@@ -4,4 +4,7 @@ class User < ApplicationRecord
   validates :name, presence: true
   validates :terms_of_service, acceptance: true
   validates_associated :books
+  validates :password, presence: true,
+    confirmation: true
+  validates :password_confirmation, presence: true
 end
