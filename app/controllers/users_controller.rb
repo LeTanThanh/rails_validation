@@ -49,7 +49,7 @@ class UsersController < ApplicationController
   private
 
   def user_params
-    params.require(:user).permit :name
+    params.require(:user).permit :name, :terms_of_service
   end
 
   def load_user
