@@ -6,5 +6,6 @@ class User < ApplicationRecord
   validates_associated :books
   validates :password, presence: true,
     confirmation: true
-  validates :password_confirmation, presence: true
+  validates :password_confirmation, presence: true, on: :create
+  validates :subdomain, exclusion: {in: %w(www us ca jp)}
 end
