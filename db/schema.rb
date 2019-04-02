@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_04_02_033824) do
+ActiveRecord::Schema.define(version: 2019_04_02_035046) do
 
   create_table "books", force: :cascade do |t|
     t.string "name"
@@ -28,6 +28,7 @@ ActiveRecord::Schema.define(version: 2019_04_02_033824) do
     t.string "password"
     t.string "subdomain"
     t.string "email"
+    t.string "gender"
   end
 
 end
