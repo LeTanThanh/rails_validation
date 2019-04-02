@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_04_02_031413) do
+ActiveRecord::Schema.define(version: 2019_04_02_033824) do
 
   create_table "books", force: :cascade do |t|
     t.string "name"
@@ -27,6 +27,7 @@ ActiveRecord::Schema.define(version: 2019_04_02_031413) do
     t.boolean "terms_of_service", default: false
     t.string "password"
     t.string "subdomain"
+    t.string "email"
   end
 
 end
